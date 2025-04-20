@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled2/core/di/injector.dart';
+import 'package:untitled2/core/di/configure_dependencies.dart';
+import 'package:untitled2/core/di/setup_dependencies.dart';
 import 'package:untitled2/features/news_feature/presentation/providers/news_provider.dart';
 import 'package:untitled2/features/news_feature/presentation/screens/news_screen.dart';
 
-void main() {
-   setupDependencies(); 
+void main() async{
+   await configureDependencies(); 
+  setupDependencies(); 
+  //  setupDependencies(); 
  runApp(
     ChangeNotifierProvider(
       create: (_) => sl<NewsProvider>()..loadNews(),

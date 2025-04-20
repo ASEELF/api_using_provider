@@ -5,6 +5,7 @@ import 'package:untitled2/features/news_feature/data/services/news_api_service.d
 import 'package:untitled2/features/news_feature/presentation/providers/news_provider.dart';
 
 
+
 final sl = GetIt.instance; 
 
 void setupDependencies() {
@@ -20,8 +21,5 @@ void setupDependencies() {
       () => NewsProvider(sl<NewsRepositoryImpl>()));
 
 
-      final getIt = GetIt.instance;
-
-@InjectableInit()
-Future<void> configureDependencies() async => $initGetIt(getIt);
+      
 }
