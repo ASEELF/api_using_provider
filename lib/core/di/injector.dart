@@ -1,0 +1,19 @@
+import 'package:get_it/get_it.dart';
+import 'package:untitled2/features/data/impl/news_repository_impl.dart';
+import 'package:untitled2/features/data/services/news_api_service.dart';
+import 'package:untitled2/features/presentation/providers/news_provider.dart';
+
+final sl = GetIt.instance; 
+
+void setupDependencies() {
+  // Services
+  sl.registerLazySingleton<NewsApiService>(() => NewsApiService());
+
+  // Repositories
+  sl.registerLazySingleton<NewsRepositoryImpl>(
+      () => NewsRepositoryImpl(sl<NewsApiService>()));
+
+  // Providers
+  sl.registerFactory<NewsProvider>(
+      () => NewsProvider(sl<NewsRepositoryImpl>()));
+}
