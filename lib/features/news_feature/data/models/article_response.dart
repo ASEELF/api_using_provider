@@ -1,4 +1,4 @@
-import 'package:untitled2/features/domain/entities/article_entity.dart';
+import 'package:untitled2/features/news_feature/domain/entities/article_entity.dart';
 
 
 class ArticleResponse {

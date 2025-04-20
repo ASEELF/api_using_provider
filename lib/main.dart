@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled2/core/di/injector.dart';
-import 'package:untitled2/features/presentation/providers/news_provider.dart';
-import 'package:untitled2/features/presentation/screens/news_screen.dart';
+import 'package:untitled2/features/news_feature/presentation/providers/news_provider.dart';
+import 'package:untitled2/features/news_feature/presentation/screens/news_screen.dart';
 
 void main() {
    setupDependencies(); 

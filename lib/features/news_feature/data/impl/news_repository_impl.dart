@@ -1,4 +1,4 @@
-import 'package:untitled2/features/data/services/news_api_service.dart';
+import 'package:untitled2/features/news_feature/data/services/news_api_service.dart';
 
 import '../../domain/entities/article_entity.dart';
 import '../../domain/repository/news_repository.dart';
