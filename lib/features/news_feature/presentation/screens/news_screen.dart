@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:untitled2/core/theme/color_manager.dart';
 import 'package:untitled2/core/widgets/custom_error_widget.dart';
 import 'package:untitled2/core/widgets/custom_loading_widget.dart';
-import '../../domain/entities/article_entity.dart';
+import 'package:untitled2/features/news_feature/domain/entities/article_entity.dart';
 import '../providers/news_provider.dart';
 
 class NewsScreen extends StatelessWidget {

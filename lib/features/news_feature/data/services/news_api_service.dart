@@ -3,7 +3,7 @@ import 'package:logger/logger.dart';
 import '../models/article_response.dart';
 
 class NewsApiService {
-  final String apiKey = '9fecbbc655d2404790972c1bfe90bc18';
+  final String apiKey = '22197779b17946ab949a78e557c07b98';
 
   Future<List<ArticleResponse>> fetchNews() async {
     final dio = Dio();

@@ -1,11 +1,27 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'payment_state.freezed.dart';
+import 'package:equatable/equatable.dart';
 
-@freezed
-class PaymentState with _$PaymentState {
-  const factory PaymentState.initial() = _Initial;
-  const factory PaymentState.loading() = _Loading;
-  const factory PaymentState.success() = _Success;
-  const factory PaymentState.failure(String error) = _Failure;
+enum PaymentStatus { initial, loading, success, failure }
+
+class PaymentState extends Equatable {
+  final PaymentStatus status;
+  final String message;
+
+  const PaymentState({
+    this.status = PaymentStatus.initial,
+    this.message = '',
+  });
+
+  PaymentState copyWith({
+    PaymentStatus? status,
+    String? message,
+  }) {
+    return PaymentState(
+      status: status ?? this.status,
+      message: message ?? this.message,
+    );
+  }
+
+  @override
+  List<Object> get props => [status, message];
 }

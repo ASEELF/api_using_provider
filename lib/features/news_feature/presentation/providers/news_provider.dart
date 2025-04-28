@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../domain/entities/article_entity.dart';
-import '../../domain/repository/news_repository.dart';
+import 'package:untitled2/features/news_feature/domain/entities/article_entity.dart' show ArticleEntity;
+import 'package:untitled2/features/news_feature/domain/repositories/news_repositories.dart';
 
 class NewsProvider with ChangeNotifier {
   final NewsRepository repository;
